@@ -23,12 +23,12 @@
         </video>
     </div>
 
-    <nav class="navbar desktop navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
 
-            <div> <img src="assets/LOGOTYPE.png" alt="" class="navbar-brand brand"> </div>
+            <div> <img src="assets/LOGO-FULL.png" alt="" class="navbar-brand brand"> </div>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse desktop navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="https://twitter.com/DemadeClothing"
