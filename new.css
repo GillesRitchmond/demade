@@ -173,9 +173,10 @@ span{
     margin-left: 25%;
     text-align: center;
     justify-content: center;
+    display: contents;
   }
   .time{
-    margin-top: 2%;
+    margin-top: 0%;
   }
   /* .mobile {
     /* position: relative; *

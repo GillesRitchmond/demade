@@ -44,7 +44,7 @@
     </nav>
 
     <div class="container mobile brand">
-        <img src="assets/LOGOTYPE.png" alt="" class="navbar-brand brand">
+        <img src="assets/LOGO-FULL.png" alt="" class="navbar-brand brand">
     </div>
 
 
