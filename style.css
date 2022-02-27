@@ -1,0 +1,147 @@
+/* video {
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+     height: auto;
+    width: 100%;
+} */
+#video-fond {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  #video-fond > video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* 1. Pas de support d'object-fit */
+  @media (min-aspect-ratio: 16/9) {
+    #video-fond > video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+  @media (max-aspect-ratio: 16/9) {
+    #video-fond > video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+  /* 2. En cas de support d'object-fit, écrase les règles en (1) */
+  @supports (object-fit: cover) {
+    #video-fond > video {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+body{
+    overflow: hidden;
+    font-family: poppins;
+    background-color: #14151C;
+}
+.navbar{
+    margin: 60px 70px;
+}
+.footer{
+  margin: 60px 70px 80px 70px;
+}
+nav{
+    position: relative;
+}
+.brand{
+    float: left;
+    color: #FFF;
+    font-weight: 600;
+}
+ul li{
+    list-style: none;
+    display: inline;
+}
+ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600; 
+}
+ul li a:hover{
+    text-decoration: underline;
+}
+nav ul li{
+    padding: 0 16px;
+    float: right;
+}
+nav ul li a{
+    color: white;
+    opacity: 50%;
+}
+
+nav ul li a:hover{
+    opacity: 100%;
+}
+.center{
+  text-align: center;
+  float: none;
+}
+.right{
+  float: right;
+  transform: rotate(90deg);
+  color: #FFF;
+}
+.time{
+    position: relative;
+    margin: 440px auto;
+    /* top: 80%; */
+    width: fit-content;
+    padding: 10px 80px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFF;
+    background-color: rgba(190,190,190,0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 160px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+.count-time{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+@media only screen and (max-width: 823px){
+  .navbar ul li a{
+    display: none;
+}
+nav ul li{
+  float: none;
+}
+.navbar{
+  /* margin: 30% auto; */
+  justify-content: center;
+  text-align: center;
+  border: 7px solid #FFF;
+  width: min-content;
+}
+.navbar .brand{
+  margin: 0 auto;
+  width: auto;
+}
+.footer{
+  margin: 5px;
+}
+  .time{
+    margin: 55% auto;
+  }
+}
