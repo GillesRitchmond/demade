@@ -73,7 +73,7 @@
 .time{
   /* position: relative;
   margin: 440px auto; */
-  margin-top: 160%;
+  margin-top: 200%;
   width: max-content;
   padding: 10px 60px;
   font-size: 16px;
@@ -175,7 +175,7 @@ span{
     justify-content: center;
   }
   .time{
-    margin-top: 3%;
+    margin-top: 2%;
   }
   /* .mobile {
     /* position: relative; *
