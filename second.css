@@ -1,0 +1,246 @@
+/* section{
+    border: 10px solid gray;
+    height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 10px solid gray;
+    max-width: 70px;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+.container{
+    position: relative;
+}
+#video-fond, .fit-to {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  #video-fond > video {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  /* 1. Pas de support d'object-fit */
+  @media (min-aspect-ratio: 16/9) {
+    #video-fond > video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+  @media (max-aspect-ratio: 16/9) {
+    #video-fond > video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+  /* 2. En cas de support d'object-fit, écrase les règles en (1) */
+  @supports (object-fit: cover) {
+    #video-fond > video {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+.body{
+    background-color: black;
+}
+.col-md{
+    /* border: 2px solid gray; */
+    color: #F7F7F7;
+}
+.logo{
+    height: auto;
+    width: 220px;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 0 0 0 12px;
+}
+ul li .social-media{
+    text-decoration: none;
+    color: #F7F7F7;
+    opacity: 50%;
+}
+ul li .social-media:hover{
+    text-decoration: underline;
+    opacity: 100%;
+    color: #F7F7F7;
+}
+.time{
+    margin: 0 auto;
+    padding: 10px 60px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: lighter;
+    color: #FFF;
+    background-color: rgba(190, 190, 190, 0.281);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 160px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+#countbox{
+    font-weight: bold;
+    font-size: 25px;
+}
+/* .fit-to{
+    padding: 17% 0;
+} */
+.date{
+    transform: rotate(90deg);
+    color: #F7F7F7;
+    position: absolute;
+    float: right;
+    /* margin-right: 3%; */
+    margin-top: -25px;
+    height: auto;
+    right: 0.1%;
+    font-weight: lighter;
+}
+.footer{
+  position: fixed;
+  bottom: 50px;
+  right: calc(100vw / 6 - 200px);
+  text-align: center;
+}
+
+@media screen and (max-width:380px) {
+  .media-link{
+    display: none;
+  }
+  .logo{
+    margin: 25% 0 0 15%;
+  }
+  .time{
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  #countbox{
+    font-size: 21px;
+  }
+  .row .clothing{
+    margin-top: 50%;
+    position: absolute;
+    margin-left: -30%;
+  }
+  .date{
+    position: absolute;
+    margin-top: 12%;
+  }
+  .footer{
+    position: fixed;
+    bottom: 110px;
+    right: calc(100vw / 1.8 - 200px);
+  }
+}
+@media (min-width: 381px) and (max-width: 600px) {
+  .media-link{
+    display: none;
+  }
+  .logo{
+    margin: 25% 0 0 15%;
+  }
+  .time{
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  #countbox{
+    font-size: 21px;
+  }
+  .row .clothing{
+    margin-top: 50%;
+    position: absolute;
+    margin-left: -30%;
+  }
+  .date{
+    position: absolute;
+    margin-top: 12%;
+  }
+  .footer{
+    position: fixed;
+    bottom: 130px;
+    right: calc(100vw / 1.9 - 200px);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+  .media-link{
+    display: none;
+  }
+  .logo{
+    margin: 25% 0 0 15%;
+  }
+  .time{
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  #countbox{
+    font-size: 21px;
+  }
+  .row .clothing{
+    margin-top: 50%;
+    position: absolute;
+    margin-left: -30%;
+  }
+  .date{
+    position: absolute;
+    margin-top: 12%;
+  }
+  .footer{
+    bottom: 100px;
+    right: calc(100vw / 3.25 - 200px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+  .media-link{
+    display: none;
+  }
+  .logo{
+    margin: 25% 0 0 15%;
+  }
+  .time{
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  #countbox{
+    font-size: 21px;
+  }
+  .row .clothing{
+    margin-top: 50%;
+    position: absolute;
+    margin-left: -30%;
+  }
+  .date{
+    position: absolute;
+    margin-top: 12%;
+  }
+  .footer{
+    bottom: 130px;
+    right: calc(100vw / 3.9 - 200px);
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px){
+  .footer{
+    bottom: 20px;
+    right: calc(100vw / 4 - 200px);
+  }
+}
